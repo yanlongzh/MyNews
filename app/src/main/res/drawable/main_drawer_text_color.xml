@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 Google Inc. All Rights Reserved. -->
+<!--
+    Selector的结构描述：
+
+1.android:state_pressed="true/false"
+
+true:表示按下状态下使用，false:表示非按下状态下使用。
+
+2.android:state_focused="true/false"
+
+ture:表示聚焦状态使用（例如使用滚动球/D-pad聚焦Button），false:表示非聚集状态下使用。
+
+3.android:state_selected="true/false"
+
+true:表示被选中状态下使用，false:表示非选中下使用
+
+4.android:state_active="true/false"
+
+true:表示可勾选状态时使用，false:表示不可勾选状态下使用
+
+5. android:state_checkable="true/false"
+
+true:表示勾选状态下使用，false:表示非勾选状态使用
+
+6.android:state_checked="true/false"
+
+true:表示勾选状态下使用，false:表示非勾选状态使用
+
+7. android:state_enabled="true/false"
+
+true:表示可用状态使用（能接收触摸/点击事件），false:表示不可用状态使用
+
+8. android:state_window_focused="true/false"
+
+true:表示应用程序窗口有焦点时使用（应用程序在前台），false:表示无焦点时使用
+9.android:background
+
+设置背景图片 模拟灯开启关闭
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:color="#ff999999"/>
+    <item
+        android:state_activated="true"
+        android:color="@android:color/white" />
+    <item
+        android:color="#636363" />
+</selector>

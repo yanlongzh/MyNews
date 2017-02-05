@@ -1,0 +1,26 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <!--toolbar 的颜色-->
+        <item name="colorPrimary">#3A5FCD</item>
+        <!--&lt;!&ndash;最上边的状态栏Status bar color&ndash;&gt;-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!--&lt;!&ndash;视窗中的各种控件选中的之后的颜色&ndash;&gt;-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--&lt;!&ndash;视窗的背景颜色&ndash;&gt;-->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="ToolBarPopMenu" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">#5ad1cb</item>
+        <item name="actionOverflowMenuStyle">@style/toolbarPopmenu</item>
+    </style>
+    <style name="toolbarPopmenu" parent="Base.Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+</resources>

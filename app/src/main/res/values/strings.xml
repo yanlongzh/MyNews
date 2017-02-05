@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MyZhihu</string>
+    <string name="left_user">yanlongzh</string>
+    <string name="left_user_work">码农</string>
+    <string name="left_set">设置</string>
+    <string name="left_shift">切换主题</string>
+    <string name="menu_search">查询</string>
+    <string name="menu_notify">通知</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_register">登出</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_shuffle">随机看</string>
+    <string name="draw_open">打开</string>
+    <string name="draw_close">关闭</string>
+</resources>
