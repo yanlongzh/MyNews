@@ -1,0 +1,2 @@
+# MyNews
+the first project
