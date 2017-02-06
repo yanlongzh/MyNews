@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:background="@color/turquoise"
+        android:background="@drawable/btu_shape"
         android:text="进入应用"
         android:textStyle="bold"
         android:textSize="15sp"

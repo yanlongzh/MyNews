@@ -14,9 +14,6 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.hui.mynews.utils.ConfigStatic;
-import com.example.hui.mynews.utils.LeftData;
-import com.example.hui.mynews.utils.LeftItemBean;
 import com.example.hui.mynews.R;
 import com.example.hui.mynews.fragment.AttentionFragment;
 import com.example.hui.mynews.fragment.CollectionFragment;
@@ -24,6 +21,9 @@ import com.example.hui.mynews.fragment.DraftFragment;
 import com.example.hui.mynews.fragment.FindFragment;
 import com.example.hui.mynews.fragment.HomePageFragment;
 import com.example.hui.mynews.fragment.LeftFragment;
+import com.example.hui.mynews.utils.ConfigStatic;
+import com.example.hui.mynews.utils.LeftData;
+import com.example.hui.mynews.utils.LeftItemBean;
 
 import java.util.List;
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initSplash();//这个的isFristin还有点问题记得改正 要false；
+        initSplash();
         initToolBar();
         initFragment(savedInstanceState);
     }
@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
                         break;
                     case R.id.toolbar_about:
                         startActivity(new Intent(MainActivity.this,AboutActivity.class));
-
                 }
 
                 return false;

@@ -42,7 +42,7 @@ public class GuideActivity extends FragmentActivity {
     private void fristSplash() {
         SharedPreferences spf = getSharedPreferences(ConfigStatic.SHAREDREFERENCE_NAME,MODE_PRIVATE);
         SharedPreferences.Editor editor = spf.edit();
-        editor.putBoolean("isFrist",false);
+        editor.putBoolean("isFirst",false);
         editor.apply();
     }
 
