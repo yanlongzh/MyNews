@@ -1,15 +1,13 @@
 package com.example.hui.mynews.activity;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.widget.ImageView;
 
-import com.example.hui.mynews.utils.ConfigStatic;
-import com.example.hui.mynews.adapter.FragmentAdapter;
 import com.example.hui.mynews.R;
+import com.example.hui.mynews.adapter.FragmentAdapter;
 import com.example.hui.mynews.fragment.Image_One_Fragment;
 import com.example.hui.mynews.fragment.Image_Three_Fragment;
 import com.example.hui.mynews.fragment.Image_Two_Fragment;
@@ -33,17 +31,9 @@ public class GuideActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guide_point_layout);
-        fristSplash();
         initFragment();
         initView();
 
-    }
-
-    private void fristSplash() {
-        SharedPreferences spf = getSharedPreferences(ConfigStatic.SHAREDREFERENCE_NAME,MODE_PRIVATE);
-        SharedPreferences.Editor editor = spf.edit();
-        editor.putBoolean("isFirst",false);
-        editor.apply();
     }
 
     private void initView() {

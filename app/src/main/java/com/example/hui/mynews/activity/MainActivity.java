@@ -1,7 +1,6 @@
 package com.example.hui.mynews.activity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,14 +20,13 @@ import com.example.hui.mynews.fragment.DraftFragment;
 import com.example.hui.mynews.fragment.FindFragment;
 import com.example.hui.mynews.fragment.HomePageFragment;
 import com.example.hui.mynews.fragment.LeftFragment;
-import com.example.hui.mynews.utils.ConfigStatic;
 import com.example.hui.mynews.utils.LeftData;
 import com.example.hui.mynews.utils.LeftItemBean;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LeftFragment.menuClickListener{
-    private boolean isFristIn= false;
+
     private Toolbar mToolbar;
     private LayoutInflater infla;
     private DrawerLayout mdraw;
@@ -48,21 +46,8 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initSplash();
         initToolBar();
         initFragment(savedInstanceState);
-    }
-
-
-
-    private void initSplash() {
-        SharedPreferences sp = getSharedPreferences(ConfigStatic.SHAREDREFERENCE_NAME,MODE_PRIVATE);
-        isFristIn = sp.getBoolean("isFirst",true);
-        if(isFristIn){
-            Intent mintent = new Intent();
-            mintent.setClass(this, GuideActivity.class);
-            startActivity(mintent);
-        }
     }
 
     private void initFragment(Bundle savedInstanceState) {
@@ -93,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
                     case R.id.toolbar_about:
                         startActivity(new Intent(MainActivity.this,AboutActivity.class));
                 }
-
                 return false;
             }
         });
