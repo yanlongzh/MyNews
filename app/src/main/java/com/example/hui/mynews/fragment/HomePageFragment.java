@@ -24,7 +24,7 @@ public class HomePageFragment extends Fragment {
     private List<Fragment> mList;
     private NewFragment nfragment;
     private SkillFragment sfragment;
-    private CompanyFragment cfragment;
+    private StarFragment cfragment;
     private List<TabBean> mtbs;
     private VpAdapter mvpadapter;
     private TabLayout mtablayout;
@@ -50,11 +50,11 @@ public class HomePageFragment extends Fragment {
     private void initFragment() {
         mtbs = new ArrayList<TabBean>();
         mtbs.add(new TabBean("最新新闻"));
-        mtbs.add(new TabBean("明星公司"));
-        mtbs.add(new TabBean("技能get"));
+        mtbs.add(new TabBean("明星娱乐"));
+        mtbs.add(new TabBean("美女图片"));
         mList= new ArrayList<Fragment>();
         mList.add(new NewFragment());
-        mList.add(new CompanyFragment());
+        mList.add(new StarFragment());
         mList.add(new SkillFragment());
         mvpadapter = new VpAdapter(getChildFragmentManager(),mList,mtbs);
         mvp.setAdapter(mvpadapter);

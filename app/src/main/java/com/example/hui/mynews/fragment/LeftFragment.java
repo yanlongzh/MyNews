@@ -1,5 +1,6 @@
 package com.example.hui.mynews.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import com.example.hui.mynews.R;
+import com.example.hui.mynews.activity.PersonalActivity;
+import com.example.hui.mynews.adapter.MyListAdapter;
 import com.example.hui.mynews.utils.LeftData;
 import com.example.hui.mynews.utils.LeftItemBean;
-import com.example.hui.mynews.adapter.MyListAdapter;
-import com.example.hui.mynews.R;
 
 import java.util.List;
 
@@ -20,13 +24,18 @@ import java.util.List;
  * Created by yanlongzh on 2016/12/19.
  */
 
-public class LeftFragment extends Fragment {
+public class LeftFragment extends Fragment implements View.OnClickListener {
     private ListView mListView;
     private MyListAdapter mAdapter;
     private View mView;
     private List<LeftItemBean> mItemBeen;
+    private ImageView title_icon;
+    private TextView title_tv;
 
-   public interface menuClickListener{
+    /*
+    * 主页接口 回调设置页面
+    * */
+    public interface menuClickListener{
         void clickMenu(int position);
     }
 
@@ -43,9 +52,26 @@ public class LeftFragment extends Fragment {
                 if(getActivity() instanceof menuClickListener){
                     ((menuClickListener) getActivity()).clickMenu(position);
                 }
-
             }
         });
+        initView();
         return mView;
+    }
+
+    private void initView() {
+        title_icon = (ImageView) mView.findViewById(R.id.title_icon);
+        title_tv = (TextView) mView.findViewById(R.id.title_tv);
+        title_icon.setOnClickListener(this);
+        title_tv.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.title_icon:
+            case R.id.title_tv:
+                startActivity(new Intent(getActivity(),PersonalActivity.class));
+                break;
+        }
     }
 }

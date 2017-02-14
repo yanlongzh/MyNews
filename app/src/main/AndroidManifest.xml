@@ -25,7 +25,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.base" >
       <uses-library android:name="android.test.runner" />
-        <!--首次安装导航页-->
+        <!--闪屏页-->
         <activity
             android:theme="@style/FullScreenTheme"
             android:name=".activity.SplashActivity">
@@ -35,7 +35,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.hui.mynews.activity.MainActivity"/>
+        <activity
+            android:theme="@style/MainTheme"
+            android:name="com.example.hui.mynews.MainActivity"/>
         <activity android:name="com.example.hui.mynews.activity.GuideActivity"/>
         <!--网页-->
         <activity android:name="com.example.hui.mynews.activity.WebACtivity"/>
@@ -46,6 +48,9 @@
         <!--注册界面-->
         <activity android:name=".activity.RegisiterActivity"
                     android:label="注册"/>
+        <!--个人中心界面-->
+        <activity android:name=".activity.PersonalActivity"
+                    android:label="个人中心"/>
     </application>
 
 </manifest>

@@ -2,78 +2,45 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-                android:orientation="vertical">
+              android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#3A5FCD">
+        android:background="#3A5FCD"
+        android:orientation="vertical">
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/icon_avatar"
+            android:id="@+id/title_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center"/>
+            android:clickable="true"
+            android:src="@drawable/icon_avatar"/>
         <TextView
+            android:id="@+id/title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="12sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:gravity="center"
             android:text="@string/left_user"
             android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12sp"
-            android:text="@string/left_user_work"
-            android:textColor="#ffffff"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:layout_marginBottom="10dp"/>
+            android:textSize="25sp"
+        />
     </LinearLayout>
-    <ListView
-        android:id="@+id/left_listview"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight=".71"
-        android:scrollbars="none"
-        android:divider="#00000000"
-        android:background="@color/white"
-        android:listSelector="@color/gray">
-    </ListView>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight=".29"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:background="@color/white">
-        <ImageView
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_marginTop="15dp"
+            android:id="@+id/left_listview"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/gray"/>
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:textColor="@color/gray"
-            android:text="@string/left_shift"
-            android:textSize="18sp"
-            android:clickable="true"/>
-        <TextView
-            android:layout_marginLeft="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:textColor="@color/gray"
-            android:layout_weight="1"
-            android:text="@string/left_set"
-            android:textSize="18sp"
-            android:clickable="true"/>
-
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="#00000000"
+            android:listSelector="@color/gray"
+            android:scrollbars="none">
+        </ListView>
     </LinearLayout>
-
-
 </LinearLayout>

@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <TextView
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+           android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="我是发现"/>
-</LinearLayout>
+        android:orientation="vertical"
+        android:padding="15dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快递公司:"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/express_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="快递单号:"
+                android:textSize="20dp"/>
+            <EditText
+                android:id="@+id/express_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/express_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btu_shape"
+            android:text="点击查询"
+            android:textColor="@color/white"/>
+       <ListView
+           android:dividerHeight="0dp"
+           android:divider="#00000000"
+           android:id="@+id/express_listview"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"/>
+    </LinearLayout>
+</ScrollView>

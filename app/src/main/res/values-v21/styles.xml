@@ -3,4 +3,5 @@
         <style name="AppTheme" parent="AppTheme.base">
                 <item name="android:navigationBarColor">@color/colorPrimary</item>
         </style>
+        <style name="anim">pop_anim</style>
 </resources>

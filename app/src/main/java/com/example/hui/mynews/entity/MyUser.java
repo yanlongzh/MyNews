@@ -8,19 +8,10 @@ import cn.bmob.v3.BmobUser;
  */
 
 public class MyUser extends BmobUser {
-    private String name;
+    private String nickName;
     private int age;
     private boolean sex;
     private String introduce;
-
-
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
 
     public int getAge() {
         return age;
@@ -30,7 +21,7 @@ public class MyUser extends BmobUser {
         this.age = age;
     }
 
-    public boolean isSex() {
+    public boolean getSex() {
         return sex;
     }
 
@@ -45,5 +36,13 @@ public class MyUser extends BmobUser {
 
     public void setIntroduce(String introduce) {
         this.introduce = introduce;
+    }
+
+    public String getNickName() {
+        return nickName;
+    }
+
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 }

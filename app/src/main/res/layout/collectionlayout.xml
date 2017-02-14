@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <TextView
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <ListView
+        android:dividerHeight="0dp"
+        android:divider="#00000000"
+        android:id="@+id/speak_list"
+        android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="我是收藏"
-        android:textColor="@color/black"/>
+        android:layout_height="0dp"/>
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/speak_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:text="发送"
+            android:background="@drawable/btu_shape"
+            android:id="@+id/speak_bt"
+            android:layout_width="80dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
 </LinearLayout>

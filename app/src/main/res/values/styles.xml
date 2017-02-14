@@ -1,16 +1,23 @@
 <resources xmlns:android="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme.base" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme.base" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+
         <!--toolbar 的颜色-->
         <item name="colorPrimary">#3A5FCD</item>
         <!--&lt;!&ndash;最上边的状态栏Status bar color&ndash;&gt;-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!--&lt;!&ndash;视窗中的各种控件选中的之后的颜色&ndash;&gt;-->
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#3A5FCD</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+
         <!--&lt;!&ndash;视窗的背景颜色&ndash;&gt;-->
         <item name="android:windowBackground">@color/white</item>
         <item name="android:textColorSecondary">@color/white</item>
@@ -28,5 +35,15 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="@android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="pop_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_out</item>
     </style>
 </resources>
