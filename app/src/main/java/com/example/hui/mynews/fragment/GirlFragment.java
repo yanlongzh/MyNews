@@ -15,7 +15,7 @@ import com.bumptech.glide.Glide;
 import com.example.hui.mynews.R;
 import com.example.hui.mynews.adapter.GirlAdapter;
 import com.example.hui.mynews.entity.GirlBean;
-import com.example.hui.mynews.utils.CustomDiglog;
+import com.example.hui.mynews.view.CustomDiglog;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

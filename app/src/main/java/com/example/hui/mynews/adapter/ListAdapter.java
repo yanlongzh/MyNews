@@ -3,6 +3,8 @@ package com.example.hui.mynews.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,8 +13,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.hui.mynews.utils.HomeNewBean;
+import com.bumptech.glide.Glide;
 import com.example.hui.mynews.R;
+import com.example.hui.mynews.utils.HomeNewBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.BitmapCallback;
 
@@ -32,11 +35,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
     private View mView;
     private Uri uri;
     private MyItemClickListener mListener;
+    private List<String> imgUrls;
 
-    public ListAdapter(Context mContext, List<HomeNewBean> mlist) {
+    public ListAdapter(Context mContext, List<HomeNewBean> mlist,List<String> imgUrls) {
         this.mContext = mContext;
         this.mlist = mlist;
         mInflater= LayoutInflater.from(mContext);
+        this.imgUrls = imgUrls;
     }
 
     @Override
@@ -46,6 +51,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         return myViewHolder;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         holder.itemView.setTag(position);
@@ -60,18 +66,25 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.MyViewHolder> 
         holder.title.setText(mlist.get(position).getDatatext());
         holder.time.setText(mlist.get(position).getDatatime());
         holder.Newsfrom.setText(mlist.get(position).getnewsfrom());
-            OkHttpUtils.get().url(mlist.get(15).getImgurl()).build()
+        String uri = mlist.get(position).getImgurl();
+        if(uri.equals("")){
+            Glide.with(mContext).load(imgUrls.get(position)).into( holder.imgurl);
+//            holder.imgurl.setImageBitmap(BitmapFactory.
+//                    decodeResource(mContext.getResources(),R.mipmap.ic_launcher));
+        }else{
+            OkHttpUtils.get().url(uri).build()
                     .execute(new BitmapCallback() {
                         @Override
                         public void onError(Call call, Exception e, int id) {
                             Log.d("OnError", "" + e.getMessage());
                         }
-
                         @Override
                         public void onResponse(Bitmap response, int id) {
                             holder.imgurl.setImageBitmap(response);
                         }
                     });
+        }
+
     }
 
     @Override

@@ -36,4 +36,15 @@ public class HomeNewManager {
         }
         return homenewbeans;
     }
+
+    public  static List<String> getImgurl(Document document){
+        List imgUrl = new ArrayList<String>();
+        Elements elements = document.select("div.item").first().select("div.Q-tpList");
+        for (Element element:elements){
+            Elements pic_element= element.select("img");
+            String _imgurl = pic_element.attr("src");
+            imgUrl.add(_imgurl);
+        }
+        return imgUrl;
+    }
 }

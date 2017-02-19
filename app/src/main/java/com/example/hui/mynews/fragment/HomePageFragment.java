@@ -23,7 +23,7 @@ import java.util.List;
 public class HomePageFragment extends Fragment {
     private List<Fragment> mList;
     private NewFragment nfragment;
-    private SkillFragment sfragment;
+    private GirlFragment sfragment;
     private StarFragment cfragment;
     private List<TabBean> mtbs;
     private VpAdapter mvpadapter;
@@ -55,7 +55,7 @@ public class HomePageFragment extends Fragment {
         mList= new ArrayList<Fragment>();
         mList.add(new NewFragment());
         mList.add(new StarFragment());
-        mList.add(new SkillFragment());
+        mList.add(new GirlFragment());
         mvpadapter = new VpAdapter(getChildFragmentManager(),mList,mtbs);
         mvp.setAdapter(mvpadapter);
         mtablayout.setupWithViewPager(mvp);

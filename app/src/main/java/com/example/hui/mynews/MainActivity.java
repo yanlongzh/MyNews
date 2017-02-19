@@ -16,7 +16,7 @@ import android.view.MenuItem;
 import com.example.hui.mynews.activity.AboutActivity;
 import com.example.hui.mynews.fragment.PhoneFragment;
 import com.example.hui.mynews.fragment.RobotFragment;
-import com.example.hui.mynews.fragment.DataFragment;
+import com.example.hui.mynews.fragment.SettingFragment;
 import com.example.hui.mynews.fragment.ExpressFragment;
 import com.example.hui.mynews.fragment.HomePageFragment;
 import com.example.hui.mynews.fragment.LeftFragment;
@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
     private ActionBarDrawerToggle mabdt;
     private List<LeftItemBean> mlist;
 
-    private HomePageFragment hfragment;
-    private ExpressFragment ffragment;
-    private RobotFragment cfragment;
-    private DataFragment dfragment;
-    private PhoneFragment afragment;
+    private HomePageFragment mHomePageFragment;
+    private ExpressFragment mExpressFragment;
+    private RobotFragment mRobotFragment;
+    private SettingFragment mSettingFragment;
+    private PhoneFragment mPhoneFragment;
 
     private Fragment isFragment;
     private boolean isShowShuffle;
@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
         if(savedInstanceState==null) {
             FragmentManager fm = getSupportFragmentManager();
             FragmentTransaction ft = fm.beginTransaction();
-            hfragment = new HomePageFragment();
-            isFragment = hfragment;
-            ft.add(R.id.main_fragment,hfragment).commit();
+            mHomePageFragment = new HomePageFragment();
+            isFragment = mHomePageFragment;
+            ft.add(R.id.main_fragment,mHomePageFragment).commit();
         }
     }
 
@@ -97,44 +97,42 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
         switch (menuname){
             case "首页":
                if(isFragment!=null){
-                    hfragment= new HomePageFragment();
+                   mHomePageFragment= new HomePageFragment();
                }
-                switchFragment(isFragment,hfragment);
+                switchFragment(isFragment,mHomePageFragment);
                 isShowShuffle = false;
                 break;
             case "快递":
                 if(isFragment!=null){
-                    ffragment = new ExpressFragment();
+                    mExpressFragment = new ExpressFragment();
                 }
-                switchFragment(isFragment,ffragment);
+                switchFragment(isFragment,mExpressFragment);
                 break;
             case "归属地":
                 if(isFragment!=null){
-                    afragment=new PhoneFragment();
+                    mPhoneFragment=new PhoneFragment();
                 }
-                switchFragment(isFragment,afragment);
+                switchFragment(isFragment,mPhoneFragment);
                 break;
             case "机器人":
                 if(isFragment!=null){
-                    cfragment= new RobotFragment();
+                    mRobotFragment= new RobotFragment();
                 }
-                switchFragment(isFragment,cfragment);
-                break;
-            case "个人中心":
-                if(isFragment!=null){
-                    dfragment = new DataFragment();
-                }
-                switchFragment(isFragment,dfragment);
+                switchFragment(isFragment,mRobotFragment);
                 break;
             case "设置":
-
+                if(isFragment!=null){
+                    mSettingFragment = new SettingFragment();
+                }
+                switchFragment(isFragment,mSettingFragment);
+                break;
         }
-//        刷新oncreatoptionmenu()方法的
+        // 刷新oncreatoptionmenu()方法的
         invalidateOptionsMenu();
         mdraw.closeDrawers();
     }
 
-//    该方法只在menu创建的时候创建一次，后来如果想要更改menu的item，则需要invalidateOptionsMenu();
+   //该方法只在menu创建的时候创建一次，后来如果想要更改menu的item，则需要invalidateOptionsMenu();
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         if(isShowShuffle) {

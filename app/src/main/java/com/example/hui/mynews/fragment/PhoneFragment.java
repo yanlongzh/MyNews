@@ -34,7 +34,7 @@ public class PhoneFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.attentionlayout,null);
+        View view = inflater.inflate(R.layout.phone_layout,null);
        findView(view);
         return view;
     }

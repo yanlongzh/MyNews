@@ -34,14 +34,12 @@ public class PersonalActivity extends BaseActivity implements View.OnClickListen
     }
 
     private void initView() {
-        person_introduce= (EditText) findViewById(R.id.person_introduce);
-        person_sex= (EditText) findViewById(R.id.person_sex);
-        person_age= (EditText) findViewById(R.id.person_age);
-        person_name= (EditText) findViewById(R.id.person_name);
-        person_bt = (Button) findViewById(R.id.person_bt);
-        person_change= (Button) findViewById(R.id.person_change);
-
-        //  默认不可点击
+        person_introduce= (EditText)findViewById(R.id.person_introduce);
+        person_sex= (EditText)findViewById(R.id.person_sex);
+        person_age= (EditText)findViewById(R.id.person_age);
+        person_name= (EditText)findViewById(R.id.person_name);
+        person_bt = (Button)findViewById(R.id.person_bt);
+        person_change= (Button)findViewById(R.id.person_change);
         useEdit(false);
 
         MyUser userInfo = BmobUser.getCurrentUser(MyUser.class);
@@ -58,7 +56,7 @@ public class PersonalActivity extends BaseActivity implements View.OnClickListen
         person_change.setOnClickListener(this);
     }
 
-//    更改用户编辑资料状态
+    //    更改用户编辑资料状态
     private void useEdit(boolean is){
         person_introduce.setEnabled(is);
         person_sex.setEnabled(is);
@@ -75,8 +73,7 @@ public class PersonalActivity extends BaseActivity implements View.OnClickListen
                 BmobUser.logOut();
                 BmobUser currentUser = BmobUser.getCurrentUser();
                 startActivity(new Intent(this,LoginActivity.class));
-
-                finish();
+               finish();
             case R.id.person_change:
                 if(isChange){
                     final String edit_introduce = person_introduce.getText().toString().trim();
@@ -100,7 +97,7 @@ public class PersonalActivity extends BaseActivity implements View.OnClickListen
                             @Override
                             public void done(BmobException e) {
                                 if(e==null){
-                                    Toast.makeText(PersonalActivity.this, "更新用户信息成功", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(PersonalActivity.this,"更新用户信息成功", Toast.LENGTH_SHORT).show();
                                     person_change.setText("编辑资料");
                                     useEdit(false);
                                 }else{

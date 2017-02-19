@@ -16,7 +16,7 @@ import android.widget.Toast;
 import com.example.hui.mynews.MainActivity;
 import com.example.hui.mynews.R;
 import com.example.hui.mynews.entity.MyUser;
-import com.example.hui.mynews.utils.CustomDiglog;
+import com.example.hui.mynews.view.CustomDiglog;
 import com.example.hui.mynews.utils.SharedUtils;
 
 import cn.bmob.v3.exception.BmobException;
@@ -109,6 +109,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         });
                     } else {
                     Toast.makeText(this, "内容不能为空", Toast.LENGTH_SHORT).show();
+                    mDiglog.dismiss();
                 }
                 break;
             case R.id.regis_button:

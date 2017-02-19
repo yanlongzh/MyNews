@@ -40,6 +40,7 @@ public class NewFragment extends Fragment{
     private LinearLayoutManager mManager;
     private Document document;
     private ListAdapter mAdapter;
+    private List<String> imgUrls;
 
     @Nullable
     @Override
@@ -67,6 +68,7 @@ public class NewFragment extends Fragment{
                         handler.post(new Runnable() {
                             @Override
                             public void run() {
+                                imgUrls = HomeNewManager.getImgurl(document);
                                 mhomenews = HomeNewManager.getHomeNewBean(document);
                                 bindAdapter();
                             }
@@ -75,7 +77,7 @@ public class NewFragment extends Fragment{
                 });
     }
     public void  bindAdapter() {
-        mAdapter = new ListAdapter(getActivity(), mhomenews);
+        mAdapter = new ListAdapter(getActivity(), mhomenews,imgUrls);
         mManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(mManager);
         rv.setAdapter(mAdapter);

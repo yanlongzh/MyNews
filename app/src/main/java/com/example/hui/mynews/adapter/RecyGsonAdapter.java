@@ -32,7 +32,7 @@ public class RecyGsonAdapter extends RecyclerView.Adapter<RecyGsonAdapter.MyView
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = mInflater.inflate(R.layout.gson_layout,parent,false);
+        View view = mInflater.inflate(R.layout.star_layout,parent,false);
         MyViewHolder mhd = new MyViewHolder(view);
         return mhd;
     }
@@ -42,20 +42,6 @@ public class RecyGsonAdapter extends RecyclerView.Adapter<RecyGsonAdapter.MyView
         holder.tv.setText(mList.get(position).getTitle());
         holder.tvw.setText(mList.get(position).getDate());
        Glide.with(mContext).load(mList.get(position).getThumbnail_pic_s()).into(holder.iv);
-//        OkHttpUtils.get().url(mList.get(position).getThumbnail_pic_s()).build().
-//                execute(new BitmapCallback() {
-//                    @Override
-//                    public void onError(Call call, Exception e, int id) {
-//                        Log.d("OnError", "" + e.getMessage());
-//                    }
-//
-//                    @Override
-//                    public void onResponse(Bitmap response, int id) {
-//                        Glide.with()
-//                        holder.iv.setImageBitmap(response);
-//
-//                    }
-//                });
     }
 
     @Override

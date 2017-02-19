@@ -71,4 +71,5 @@ public class HomeNewBean {
                 ", herf='" + herf + '\'' +
                 '}';
     }
+
 }

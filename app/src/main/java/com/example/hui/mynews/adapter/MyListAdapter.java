@@ -21,6 +21,7 @@ public class MyListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private List<LeftItemBean> mItemList;
     private ViewHolder vh;
+
     public MyListAdapter(Context context) {
         mItemList = LeftData.getItemBean();
         mInflater = LayoutInflater.from(context);

@@ -39,7 +39,7 @@ public class ExpressFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.findlayout,null);
+        View view = inflater.inflate(R.layout.express_layout,null);
         initView(view);
         return view;
     }

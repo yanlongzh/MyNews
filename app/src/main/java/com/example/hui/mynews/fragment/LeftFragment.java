@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
     private List<LeftItemBean> mItemBeen;
     private ImageView title_icon;
     private TextView title_tv;
+    private Button person_bt;
 
     /*
     * 主页接口 回调设置页面
@@ -59,15 +61,18 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView() {
+        person_bt = (Button) mView.findViewById(R.id.left_person_bt);
         title_icon = (ImageView) mView.findViewById(R.id.title_icon);
         title_tv = (TextView) mView.findViewById(R.id.title_tv);
         title_icon.setOnClickListener(this);
         title_tv.setOnClickListener(this);
+        person_bt.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.left_person_bt:
             case R.id.title_icon:
             case R.id.title_tv:
                 startActivity(new Intent(getActivity(),PersonalActivity.class));

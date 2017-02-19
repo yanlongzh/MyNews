@@ -13,7 +13,6 @@ public class LeftData {
         arrayList.add(new LeftItemBean("快递"));
         arrayList.add(new LeftItemBean("归属地"));
         arrayList.add(new LeftItemBean("机器人"));
-        arrayList.add(new LeftItemBean("个人中心"));
         arrayList.add(new LeftItemBean("设置"));
 
         return arrayList;
