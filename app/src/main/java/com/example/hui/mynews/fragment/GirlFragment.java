@@ -33,7 +33,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  * Created by yanlongzh on 2016/12/27.
  */
 
-public class SkillFragment extends Fragment {
+public class GirlFragment extends Fragment {
     private GridView mGridView;
     private List<GirlBean> lists;
     private GirlAdapter adapter;
@@ -44,7 +44,7 @@ public class SkillFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.skill_layout,null);
+        View view=inflater.inflate(R.layout.beautiful_girl_layout,null);
         findView(view);
         return view;
     }

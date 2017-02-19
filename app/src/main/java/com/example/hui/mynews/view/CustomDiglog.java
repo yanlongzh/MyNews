@@ -1,4 +1,4 @@
-package com.example.hui.mynews.utils;
+package com.example.hui.mynews.view;
 
 import android.app.Dialog;
 import android.content.Context;
