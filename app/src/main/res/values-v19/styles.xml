@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <!--&lt;!&ndash;视窗的背景颜色&ndash;&gt;-->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+</resources>

@@ -3,6 +3,8 @@ package com.example.hui.mynews.Application;
 import android.app.Application;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.tencent.bugly.crashreport.CrashReport;
 
 import cn.bmob.v3.Bmob;
@@ -21,5 +23,6 @@ public class BaseApplication extends Application {
         Bmob.initialize(this, "8b30f2395296ae890ac3ad699dad809b");
 //        baiduMap
         SDKInitializer.initialize(getApplicationContext());
+        SpeechUtility.createUtility(getApplicationContext(), SpeechConstant.APPID +"=58aaed2e");
     }
 }

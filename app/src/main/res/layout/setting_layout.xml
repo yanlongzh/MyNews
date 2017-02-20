@@ -9,7 +9,9 @@
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
@@ -36,18 +38,18 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <LinearLayout
         android:id="@+id/sms_layout"
         android:paddingLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_width="match_parent">
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
@@ -74,15 +76,17 @@
             android:layout_height="wrap_content"/>
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <LinearLayout
+        android:background="@drawable/linerlayout_click"
+        android:clickable="true"
         android:id="@+id/set_update"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -105,16 +109,18 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <!--扫一扫-->
     <LinearLayout
+        android:background="@drawable/linerlayout_click"
+        android:clickable="true"
         android:id="@+id/set_scan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -137,16 +143,18 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <!--我的二维码-->
     <LinearLayout
+        android:background="@drawable/linerlayout_click"
+        android:clickable="true"
         android:id="@+id/set_zing"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -168,16 +176,18 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <!--我的位置-->
     <LinearLayout
+        android:background="@drawable/linerlayout_click"
+        android:clickable="true"
         android:id="@+id/set_location"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -200,16 +210,18 @@
 
     </LinearLayout>
     <ImageView
-        android:layout_marginTop="10dp"
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
     <!--关于软件-->
     <LinearLayout
+        android:background="@drawable/linerlayout_click"
+        android:clickable="true"
         android:id="@+id/set_about"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="65dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -226,8 +238,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="。。。。。。。。。"
+            android:text="你所关心的"
             android:textSize="14sp" />
-
     </LinearLayout>
 </LinearLayout>

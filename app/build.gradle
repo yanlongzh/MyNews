@@ -57,4 +57,7 @@ dependencies {
     compile files('libs/BaiduLBS_Android.jar')
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.daimajia.numberprogressbar:library:1.2@aar'
+    compile project(path: ':libzxing')
+    compile files('libs/Sunflower.jar')
+    compile files('libs/Msc.jar')
 }

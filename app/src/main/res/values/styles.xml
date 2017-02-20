@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
 
         <!--toolbar 的颜色-->
-        <item name="colorPrimary">#3A5FCD</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
         <!--&lt;!&ndash;最上边的状态栏Status bar color&ndash;&gt;-->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <!--&lt;!&ndash;视窗中的各种控件选中的之后的颜色&ndash;&gt;-->
@@ -13,11 +13,13 @@
 
     </style>
 
-    <style name="MainTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#3A5FCD</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
+    <style name="TranslucentTheme" parent="AppTheme.base">
 
+
+    </style>
+
+    <style name="MainTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <!--&lt;!&ndash;视窗的背景颜色&ndash;&gt;-->
         <item name="android:windowBackground">@color/white</item>
         <item name="android:textColorSecondary">@color/white</item>
@@ -32,8 +34,7 @@
     </style>
     
     <style name="FullScreenTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
         <item name="android:windowFullscreen">true</item>
     </style>
 
