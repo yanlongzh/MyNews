@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\yanlongzh\Desktop\MyZhihu\library\src\main\assets"/><source path="C:\Users\yanlongzh\Desktop\MyZhihu\library\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="C:\Users\yanlongzh\Desktop\MyZhihu\library\src\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="F:\project\MyNews\library\src\main\assets"/><source path="F:\project\MyNews\library\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="F:\project\MyNews\library\src\release\assets"/></dataSet></merger>

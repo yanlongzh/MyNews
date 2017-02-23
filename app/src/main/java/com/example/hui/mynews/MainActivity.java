@@ -1,5 +1,6 @@
 package com.example.hui.mynews;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,19 +15,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.hui.mynews.activity.AboutActivity;
-import com.example.hui.mynews.fragment.PhoneFragment;
-import com.example.hui.mynews.fragment.RobotFragment;
-import com.example.hui.mynews.fragment.SettingFragment;
 import com.example.hui.mynews.fragment.ExpressFragment;
 import com.example.hui.mynews.fragment.HomePageFragment;
 import com.example.hui.mynews.fragment.LeftFragment;
+import com.example.hui.mynews.fragment.PhoneFragment;
+import com.example.hui.mynews.fragment.RobotFragment;
+import com.example.hui.mynews.fragment.SettingFragment;
 import com.example.hui.mynews.utils.LeftData;
 import com.example.hui.mynews.utils.LeftItemBean;
 
 import java.util.List;
 
+/**
+ *
+ */
 public class MainActivity extends AppCompatActivity implements LeftFragment.menuClickListener{
-
+    public static Activity instance ;
     private Toolbar mToolbar;
     private LayoutInflater infla;
     private DrawerLayout mdraw;
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        instance = this;
         initToolBar();
         initFragment(savedInstanceState);
     }
@@ -82,6 +87,7 @@ public class MainActivity extends AppCompatActivity implements LeftFragment.menu
             }
         });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

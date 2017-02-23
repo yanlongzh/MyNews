@@ -7,6 +7,7 @@ import java.util.ArrayList;
  */
 
 public class LeftData {
+
     public static ArrayList<LeftItemBean> getItemBean(){
         ArrayList arrayList = new ArrayList<LeftItemBean>();
         arrayList.add(new LeftItemBean("首页"));

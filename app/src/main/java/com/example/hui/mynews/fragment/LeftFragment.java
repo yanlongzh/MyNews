@@ -1,6 +1,11 @@
 package com.example.hui.mynews.fragment;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -18,7 +23,9 @@ import com.example.hui.mynews.activity.PersonalActivity;
 import com.example.hui.mynews.adapter.MyListAdapter;
 import com.example.hui.mynews.utils.LeftData;
 import com.example.hui.mynews.utils.LeftItemBean;
+import com.example.hui.mynews.utils.SharedUtils;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 /**
@@ -67,6 +74,36 @@ public class LeftFragment extends Fragment implements View.OnClickListener {
         title_icon.setOnClickListener(this);
         title_tv.setOnClickListener(this);
         person_bt.setOnClickListener(this);
+//        广播接受注册
+        IntentFilter filter = new IntentFilter("com.example.hui.mynews");
+        getActivity().registerReceiver(new BroadRecivier(),filter);
+//        个人中心信息更新
+        String title_name = SharedUtils.getString(getActivity(),"yonghuming",null);
+        title_tv.setText(title_name);
+//        登陆获取个人中心头像
+        String uri = SharedUtils.getString(getActivity(),"Bitmap",null);
+        if(uri!=null){
+            try {
+                title_icon.setImageBitmap(BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(Uri.parse(uri))));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+//    实时接收设置中心头像的设置
+    public class BroadRecivier extends BroadcastReceiver{
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String uri = SharedUtils.getString(getActivity(),"Bitmap",null);
+            if(uri!=null){
+                try {
+                    title_icon.setImageBitmap(BitmapFactory.decodeStream(getActivity().getContentResolver().openInputStream(Uri.parse(uri))));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     @Override

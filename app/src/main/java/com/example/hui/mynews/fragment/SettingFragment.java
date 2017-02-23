@@ -39,7 +39,6 @@ import static com.example.hui.mynews.utils.SharedUtils.getBoolean;
  */
 
 public class SettingFragment extends Fragment implements View.OnClickListener {
-    private static final String TTS_key = "58aaed2e";
     private String apk;
     private static final String APK_URI = "http://192.168.1.107:8080/long/apkfig.json";
     private View view;

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ptr="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-    <GridView
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        android:id="@+id/girl_list"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:numColumns="2"
         android:verticalSpacing="2dp"
         android:horizontalSpacing="2dp"
-        android:numColumns="2"
-        android:id="@+id/girl_list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:columnWidth="100dp"
+        android:stretchMode="columnWidth"
+        android:gravity="fill"
+        ptr:ptrMode="both"
+        ptr:ptrDrawable="@color/grey" />
 </LinearLayout>

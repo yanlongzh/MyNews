@@ -4,14 +4,12 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <LinearLayout
-        android:id="@+id/robot_layout"
         android:paddingLeft="15dp"
+        android:id="@+id/robot_layout"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:layout_height="65dp">
         <LinearLayout
             android:layout_weight="1"
             android:orientation="vertical"
@@ -29,7 +27,7 @@
                 android:layout_marginTop="5dp"
                 android:text="开启的时候机器人能与你语音聊天"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="match_parent"/>
         </LinearLayout>
         <Switch
             android:id="@+id/robot_switch"
@@ -45,8 +43,6 @@
         android:id="@+id/sms_layout"
         android:paddingLeft="15dp"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:layout_width="match_parent">
@@ -85,8 +81,6 @@
         android:id="@+id/set_update"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -119,8 +113,6 @@
         android:id="@+id/set_scan"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -143,6 +135,7 @@
 
     </LinearLayout>
     <ImageView
+
         android:background="@color/gray"
         android:layout_width="match_parent"
         android:layout_height="2dp"/>
@@ -153,8 +146,6 @@
         android:id="@+id/set_zing"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -186,8 +177,6 @@
         android:id="@+id/set_location"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">
@@ -220,8 +209,6 @@
         android:id="@+id/set_about"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
         android:gravity="center_vertical"
         android:orientation="vertical"
         android:paddingLeft="15dp">

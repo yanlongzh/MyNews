@@ -96,6 +96,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         isLogin = true;
                                         startActivity(new Intent(LoginActivity.this,MainActivity.class));
                                         Toast.makeText(LoginActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                                        SharedUtils.putString(LoginActivity.this,"yonghuming",name);
                                         finish();
                                     }else{
                                             Toast.makeText(LoginActivity.this, "请到邮箱进行验证", Toast.LENGTH_SHORT).show();

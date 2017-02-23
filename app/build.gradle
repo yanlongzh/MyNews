@@ -60,4 +60,5 @@ dependencies {
     compile project(path: ':libzxing')
     compile files('libs/Sunflower.jar')
     compile files('libs/Msc.jar')
+    compile project(path: ':library')
 }

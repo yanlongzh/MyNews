@@ -44,6 +44,7 @@ public class NewFragment extends Fragment{
 
     @Nullable
     @Override
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             view=inflater.inflate(R.layout.homenew_list_layout,null);
         rv = (RecyclerView) view.findViewById(R.id.Recycler);
@@ -52,8 +53,7 @@ public class NewFragment extends Fragment{
         return view;
     }
 
-
-    private void initData() {
+   private void initData() {
         OkHttpUtils.get().url("http://news.qq.com/")
                 .build()
                 .execute(new StringCallback() {
@@ -76,12 +76,14 @@ public class NewFragment extends Fragment{
                     }
                 });
     }
+
     public void  bindAdapter() {
         mAdapter = new ListAdapter(getActivity(), mhomenews,imgUrls);
         mManager = new LinearLayoutManager(getActivity());
         rv.setLayoutManager(mManager);
         rv.setAdapter(mAdapter);
         rv.addItemDecoration(new DividerItemDecoration(getActivity(),LinearLayoutManager.VERTICAL));
+
         mAdapter.setOnItemClickListener(new ListAdapter.MyItemClickListener() {
             @Override
             public void onItemClickListener(View view, int position) {

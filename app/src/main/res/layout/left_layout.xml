@@ -2,25 +2,28 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#3A5FCD"
         android:orientation="vertical">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
             android:id="@+id/title_icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher"
             android:clickable="true"
-            android:src="@drawable/icon_avatar"/>
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"/>
         <TextView
             android:id="@+id/title_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:clickable="true"
             android:gravity="center"
             android:text="@string/left_user"

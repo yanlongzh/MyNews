@@ -36,7 +36,7 @@
                 android:layout_height="200dp"
                 android:background="@color/lightgray"
                 android:src="@mipmap/ic_launcher"
-                android:scaleType="fitXY"/>
+                android:scaleType="centerCrop"/>
             <TextView
                 android:id="@+id/json_text2"
                 android:layout_marginTop="5dp"
