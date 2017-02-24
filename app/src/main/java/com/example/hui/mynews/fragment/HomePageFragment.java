@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.hui.mynews.utils.TabBean;
+import com.example.hui.mynews.entity.TabBean;
 import com.example.hui.mynews.adapter.VpAdapter;
 import com.example.hui.mynews.R;
 

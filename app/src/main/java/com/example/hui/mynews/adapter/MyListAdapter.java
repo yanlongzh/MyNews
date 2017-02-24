@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.example.hui.mynews.R;
 import com.example.hui.mynews.utils.LeftData;
-import com.example.hui.mynews.utils.LeftItemBean;
+import com.example.hui.mynews.entity.LeftItemBean;
 
 import java.util.List;
 

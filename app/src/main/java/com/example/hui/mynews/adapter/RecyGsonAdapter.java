@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hui.mynews.R;
-import com.example.hui.mynews.utils.YuleBean;
+import com.example.hui.mynews.entity.YuleBean;
 
 import java.util.List;
 

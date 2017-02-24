@@ -1,7 +1,7 @@
 package com.example.hui.mynews.net;
 
 
-import com.example.hui.mynews.utils.HomeNewBean;
+import com.example.hui.mynews.entity.HomeNewBean;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

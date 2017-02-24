@@ -22,7 +22,7 @@ import com.example.hui.mynews.fragment.PhoneFragment;
 import com.example.hui.mynews.fragment.RobotFragment;
 import com.example.hui.mynews.fragment.SettingFragment;
 import com.example.hui.mynews.utils.LeftData;
-import com.example.hui.mynews.utils.LeftItemBean;
+import com.example.hui.mynews.entity.LeftItemBean;
 
 import java.util.List;
 

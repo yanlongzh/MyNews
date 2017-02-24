@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
-import com.example.hui.mynews.utils.TabBean;
+import com.example.hui.mynews.entity.TabBean;
 
 import java.util.List;
 

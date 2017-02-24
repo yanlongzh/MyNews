@@ -1,6 +1,8 @@
 package com.example.hui.mynews.activity;
 
 import android.content.Intent;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,14 +12,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hui.mynews.MainActivity;
 import com.example.hui.mynews.R;
 import com.example.hui.mynews.entity.MyUser;
-import com.example.hui.mynews.view.CustomDiglog;
 import com.example.hui.mynews.utils.SharedUtils;
+import com.example.hui.mynews.view.CustomDiglog;
+
+import java.io.FileNotFoundException;
 
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
@@ -35,6 +40,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private boolean isFristIn= false;
     private boolean isLogin = false;
     private CustomDiglog mDiglog;
+    private ImageView login_icon;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +65,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mDiglog = new CustomDiglog(this,100,100, R.style.CustomDialog,R.layout.login_dialog,
                 Gravity.CENTER,R.style.pop_anim_style);
         mDiglog.setCancelable(false);
+        login_icon = (ImageView) findViewById(R.id.Login_icon);
         username = (EditText) findViewById(R.id.login_username);
         password = (EditText) findViewById(R.id.login_password);
         login = (Button) findViewById(R.id.log_button);
@@ -73,6 +80,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             keepPassword.setChecked(true);
             username.setText(SharedUtils.getString(this,"username",""));
             password.setText(SharedUtils.getString(this,"password",""));
+        }
+
+        String uri = SharedUtils.getString(this,"Bitmap",null);
+        if(uri!=null){
+            try {
+                login_icon.setImageBitmap(BitmapFactory.decodeStream(getContentResolver().openInputStream(Uri.parse(uri))));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
         }
     }
 

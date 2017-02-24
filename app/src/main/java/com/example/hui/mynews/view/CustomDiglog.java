@@ -20,7 +20,7 @@ public class CustomDiglog extends Dialog {
         Window window = getWindow();
         WindowManager.LayoutParams wl = window.getAttributes();
         wl.width = WindowManager.LayoutParams.MATCH_PARENT;
-        wl.height = WindowManager.LayoutParams.WRAP_CONTENT;
+        wl.height = WindowManager.LayoutParams.MATCH_PARENT;
         wl.gravity = Gravity.CENTER;
         window.setAttributes(wl);
         window.setWindowAnimations(anim);

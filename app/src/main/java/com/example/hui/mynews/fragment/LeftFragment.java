@@ -22,7 +22,7 @@ import com.example.hui.mynews.R;
 import com.example.hui.mynews.activity.PersonalActivity;
 import com.example.hui.mynews.adapter.MyListAdapter;
 import com.example.hui.mynews.utils.LeftData;
-import com.example.hui.mynews.utils.LeftItemBean;
+import com.example.hui.mynews.entity.LeftItemBean;
 import com.example.hui.mynews.utils.SharedUtils;
 
 import java.io.FileNotFoundException;

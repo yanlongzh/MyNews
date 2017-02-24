@@ -1,6 +1,6 @@
 package com.example.hui.mynews.net;
 
-import com.example.hui.mynews.utils.YuleBean;
+import com.example.hui.mynews.entity.YuleBean;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;

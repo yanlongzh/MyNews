@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.hui.mynews.R;
-import com.example.hui.mynews.utils.HomeNewBean;
+import com.example.hui.mynews.entity.HomeNewBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.BitmapCallback;
 

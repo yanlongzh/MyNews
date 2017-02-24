@@ -88,6 +88,7 @@ public class PersonalActivity extends BaseActivity implements View.OnClickListen
 
         diaLog = new CustomDiglog(this, 0, 0, R.style.CustomDialog, R.layout.person_imgae_layout,
                 R.style.pop_anim_style, Gravity.BOTTOM);
+        diaLog.setCanceledOnTouchOutside(true);
         btn_pic = (Button) diaLog.findViewById(R.id.btn_picture);
         btn_cam = (Button) diaLog.findViewById(R.id.btn_camera);
         btn_cancel = (Button) diaLog.findViewById(R.id.btn_cancel);

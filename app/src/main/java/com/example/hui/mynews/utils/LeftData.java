@@ -1,5 +1,7 @@
 package com.example.hui.mynews.utils;
 
+import com.example.hui.mynews.entity.LeftItemBean;
+
 import java.util.ArrayList;
 
 /**

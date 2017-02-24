@@ -16,7 +16,7 @@ import com.example.hui.mynews.R;
 import com.example.hui.mynews.adapter.RecyGsonAdapter;
 import com.example.hui.mynews.net.JsonManager;
 import com.example.hui.mynews.utils.GsonUrl;
-import com.example.hui.mynews.utils.YuleBean;
+import com.example.hui.mynews.entity.YuleBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 

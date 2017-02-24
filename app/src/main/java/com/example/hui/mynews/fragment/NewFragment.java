@@ -18,7 +18,7 @@ import com.example.hui.mynews.R;
 import com.example.hui.mynews.activity.WebACtivity;
 import com.example.hui.mynews.adapter.ListAdapter;
 import com.example.hui.mynews.net.HomeNewManager;
-import com.example.hui.mynews.utils.HomeNewBean;
+import com.example.hui.mynews.entity.HomeNewBean;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.StringCallback;
 
